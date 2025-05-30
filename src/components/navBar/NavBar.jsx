@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import NavItem from "../navItem/NavItem";
-import styles from "./NavBar.module.css";
+import styles from "./NavBar.module.scss";
 import { navBarItems } from "../../common/constants/constants";
 
 export const NavBar = ({ variant }) => {

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import styles from "./TextBtn.module.css";
+import styles from "./TextBtn.module.scss";
 
 export const TextButton = ({ variant, children }) => {
   const buttonClass = classNames(styles.button, { [styles[variant]]: variant });
