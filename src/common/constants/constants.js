@@ -1,3 +1,5 @@
+import { NavLink } from "../../components/navItem/NavItem";
+
 export const words = [
   {
     id: 1,
@@ -43,4 +45,11 @@ export const wordTableHeaderCells = [
   "Перевод",
   "Тема",
   "Управление",
+];
+
+export const navBarItems = [
+  { name: "Главная", href: "/" },
+  { name: "Все слова", href: "/all-words" },
+  { name: "Выученные слова", href: "/learned-words" },
+  { name: "Тренировка", href: "/training" },
 ];
