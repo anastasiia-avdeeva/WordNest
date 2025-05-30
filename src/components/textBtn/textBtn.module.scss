@@ -1,0 +1,24 @@
+@import "../../common/styles/vars";
+@import "../../common/styles/mixins";
+
+.button {
+  padding: 6px 20px;
+  border: none;
+  border-radius: $text-btn-rad;
+  // @include Body3-font;
+  @include Button2-font;
+  color: $text-white;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.edit-button {
+  background-color: $secondary-Green;
+}
+
+.del-button {
+  background-color: $secondary-Orange;
+}
