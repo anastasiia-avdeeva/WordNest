@@ -1,10 +1,10 @@
 import { SiteLogo } from "../siteLogo/SiteLogo";
 import { NavBar } from "../navBar/NavBar";
 import { SearchPanel } from "../searchPanel/SearchPanel";
-import styles from "./SiteHeader.module.css";
+import logo from "../../assets/icons/logo.svg";
+import styles from "./SiteHeader.module.scss";
 
 export const SiteHeader = () => {
-  const logo = "icons/logo.svg";
   return (
     <header className={styles.header}>
       <div className={styles["header__first-line"]}>
