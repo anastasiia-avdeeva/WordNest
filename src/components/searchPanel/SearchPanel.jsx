@@ -1,5 +1,4 @@
 import { IconBtn } from "../iconBtn/IconBtn";
-import searchIcon from "./icon/searchIcon2.svg";
 import styles from "./SearchPanel.module.scss";
 
 export const SearchPanel = ({ inputId, inputName }) => {
@@ -12,7 +11,11 @@ export const SearchPanel = ({ inputId, inputName }) => {
         name={inputName}
         id={inputId}
       />
-      <IconBtn variant="search-button" icon={searchIcon} alt="иконка лупы" />
+      <IconBtn
+        variant="search-button"
+        icon="/icon/searchIcon2.svg"
+        alt="иконка лупы для кнопки поиска"
+      />
     </div>
   );
 };

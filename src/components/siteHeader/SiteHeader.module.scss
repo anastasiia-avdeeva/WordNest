@@ -1,0 +1,17 @@
+@import "../../common/styles/vars";
+@import "../../common/styles/mixins";
+
+.header {
+  box-shadow: 0px -1px 0px 0px $lines inset;
+
+  &__content {
+    margin: 0 auto;
+    padding: 20px;
+    width: 95%;
+    min-height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+}
