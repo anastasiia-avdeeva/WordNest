@@ -5,8 +5,12 @@ export const SiteLogo = ({ variant, icon }) => {
   const logoClass = classNames(styles.logo, { [styles[variant]]: variant });
   return (
     <div className={logoClass}>
-      <a href="/">
-        <img src={icon} alt="логотип" className={styles.logo__img} />
+      <a href="/" className={styles.logo__link}>
+        <img
+          src={icon}
+          alt="логотип сайта внутри ссылки"
+          className={styles.logo__img}
+        />
       </a>
     </div>
   );
