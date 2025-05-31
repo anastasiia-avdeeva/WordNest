@@ -104,7 +104,7 @@
 }
 
 //inputs
-@mixin input-text {
+@mixin input-text-field {
   padding: 4px;
   height: 40px;
   border: 1px solid vars.$primary-light;
