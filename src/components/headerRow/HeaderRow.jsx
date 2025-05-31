@@ -1,4 +1,4 @@
-import styles from "./HeaderTableRow.module.scss";
+import styles from "./HeaderRow.module.scss";
 import { capitalizeStr } from "../../common/utils/stringUtils";
 
 export const HeaderRow = ({ headerCells }) => {
