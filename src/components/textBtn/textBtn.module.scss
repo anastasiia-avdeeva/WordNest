@@ -1,7 +1,7 @@
 @import "../../common/styles/vars";
 @import "../../common/styles/mixins";
 
-.button {
+.btn {
   padding: 6px 20px;
   border: none;
   border-radius: $text-btn-rad;
@@ -15,10 +15,14 @@
   }
 }
 
-.edit-button {
+.primary-btn {
+  background-color: $secondary-Pink;
+}
+
+.success-btn {
   background-color: $secondary-Green;
 }
 
-.del-button {
+.danger-btn {
   background-color: $secondary-Orange;
 }

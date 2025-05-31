@@ -1,0 +1,24 @@
+@import "../../common/styles/vars";
+@import "../../common/styles/mixins";
+
+.table {
+  &__header-row {
+    height: $row-height;
+  }
+
+  &__header-cell {
+    padding: $cell-padding;
+    font-style: italic;
+    border-right: 1px solid $primary;
+    border-bottom: 1px solid $primary;
+
+    &:first-child {
+      border-top-left-radius: $table-rad;
+    }
+
+    &:last-child {
+      border-right: none;
+      border-top-right-radius: $table-rad;
+    }
+  }
+}
