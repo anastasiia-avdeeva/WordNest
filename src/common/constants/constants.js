@@ -27,13 +27,47 @@ export const words = [
     translation: "солнце",
     theme: "Природа",
   },
-
   {
     id: 5,
     word: "butterfly",
     transcription: "[ˈbʌt.ə.flaɪ]",
     translation: "бабочка",
     theme: "Животные",
+  },
+  {
+    id: 6,
+    word: "water",
+    transcription: "[ˈwɔː.tər]",
+    translation: "вода",
+    theme: "Природа",
+  },
+  {
+    id: 7,
+    word: "carrot",
+    transcription: "[ˈkær.ət]",
+    translation: "морковь",
+    theme: "Еда",
+  },
+  {
+    id: 8,
+    word: "school",
+    transcription: "[skuːl]",
+    translation: "школа",
+    theme: "Учёба",
+  },
+  {
+    id: 9,
+    word: "cat",
+    transcription: "[kæt]",
+    translation: "кот",
+    theme: "Животные",
+  },
+  {
+    id: 10,
+    word: "cloud",
+    transcription: "[klaʊd]",
+    translation: "облако",
+    theme: "Природа",
   },
 ];
 
