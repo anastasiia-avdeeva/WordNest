@@ -1,4 +1,4 @@
-@import "vars";
+@use "vars";
 
 //fonts
 @mixin Heading-base-font {
@@ -107,12 +107,12 @@
 @mixin input-text {
   padding: 4px;
   height: 40px;
-  border: 1px solid $primary-light;
-  border-radius: $input-rad;
+  border: 1px solid vars.$primary-light;
+  border-radius: vars.$input-rad;
   @include Body2-font;
 
   &:focus {
     border-width: 1.5px;
-    border-color: $primary;
+    border-color: vars.$primary;
   }
 }

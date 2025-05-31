@@ -1,12 +1,12 @@
-@import "../../common/styles/vars";
-@import "../../common/styles/mixins";
+@use "../../common/styles/vars";
+@use "../../common/styles/mixins";
 
 .search-panel {
   display: flex;
   gap: 5px;
 
   &__input {
-    @include input-text;
+    @include mixins.input-text;
     min-width: 180px;
   }
 }

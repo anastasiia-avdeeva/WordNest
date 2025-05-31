@@ -1,24 +1,24 @@
-@import "../../common/styles/vars";
-@import "../../common/styles/mixins";
+@use "../../common/styles/vars";
+@use "../../common/styles/mixins";
 
 .table {
   &__header-row {
-    height: $row-height;
+    height: vars.$row-height;
   }
 
   &__header-cell {
-    padding: $cell-padding;
+    padding: vars.$cell-padding;
     font-style: italic;
-    border-right: 1px solid $primary;
-    border-bottom: 1px solid $primary;
+    border-right: 1px solid vars.$primary;
+    border-bottom: 1px solid vars.$primary;
 
     &:first-child {
-      border-top-left-radius: $table-rad;
+      border-top-left-radius: vars.$table-rad;
     }
 
     &:last-child {
       border-right: none;
-      border-top-right-radius: $table-rad;
+      border-top-right-radius: vars.$table-rad;
     }
   }
 }

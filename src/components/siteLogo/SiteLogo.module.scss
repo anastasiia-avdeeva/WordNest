@@ -1,5 +1,5 @@
-@import "../../common/styles/vars";
-@import "../../common/styles/mixins";
+@use "../../common/styles/vars";
+@use "../../common/styles/mixins";
 
 .logo {
   flex-shrink: 0;

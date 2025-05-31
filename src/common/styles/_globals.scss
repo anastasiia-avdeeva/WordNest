@@ -1,5 +1,5 @@
-@import "./vars";
-@import "./mixins";
+@use "./vars";
+@use "./mixins";
 
 * {
   margin: 0;
@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: $bg-main;
+  background-color: vars.$bg-main;
 }
 
 a {

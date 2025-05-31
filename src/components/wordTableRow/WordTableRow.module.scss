@@ -1,12 +1,12 @@
-@import "../../common/styles/vars";
-@import "../../common/styles/mixins";
+@use "../../common/styles/vars";
+@use "../../common/styles/mixins";
 
 .table {
   &__cell {
-    padding: $cell-padding;
-    height: $row-height;
-    border-right: 1px solid $primary;
-    border-top: 1px solid $primary;
+    padding: vars.$cell-padding;
+    height: vars.$row-height;
+    border-right: 1px solid vars.$primary;
+    border-top: 1px solid vars.$primary;
 
     &:nth-child(2) {
       font-weight: bold;
