@@ -3,8 +3,8 @@ import styles from "./ActionsCell.module.scss";
 
 export const ActionsCell = ({
   btnVariant1,
-  btnVariant2,
   btnText1,
+  btnVariant2,
   btnText2,
 }) => {
   return (

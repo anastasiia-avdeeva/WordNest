@@ -1,0 +1,23 @@
+@import "../../common/styles/vars";
+@import "../../common/styles/mixins";
+
+.table {
+  &__cell {
+    padding: $cell-padding;
+    height: $row-height;
+    border-right: 1px solid $primary;
+    border-top: 1px solid $primary;
+
+    &:first-child {
+      font-weight: bold;
+    }
+
+    // &:not(:first-child) {
+    //   color: $text-dark;
+    // }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
