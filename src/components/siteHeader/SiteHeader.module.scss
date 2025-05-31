@@ -5,8 +5,7 @@
 
   &__content {
     margin: 0 auto;
-    padding: 20px;
-    width: 95%;
+    @include index.main-blocks-wrap;
     min-height: 120px;
     display: flex;
     justify-content: space-between;

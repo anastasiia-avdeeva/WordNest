@@ -116,3 +116,9 @@
     border-color: vars.$primary;
   }
 }
+
+//paddings and width
+@mixin main-blocks-wrap {
+  padding: 20px;
+  width: 95%;
+}
