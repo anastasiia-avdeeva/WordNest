@@ -1,24 +1,23 @@
-@use "../../common/styles/vars";
-@use "../../common/styles/mixins";
+@use "../../common/styles/index" as index;
 
 .table {
   &__header-row {
-    height: vars.$row-height;
+    height: index.$row-height;
   }
 
   &__header-cell {
-    padding: vars.$cell-padding;
+    padding: index.$cell-padding;
     font-style: italic;
-    border-right: 1px solid vars.$primary;
-    border-bottom: 1px solid vars.$primary;
+    border-right: 1px solid index.$primary;
+    border-bottom: 1px solid index.$primary;
 
     &:first-child {
-      border-top-left-radius: vars.$table-rad;
+      border-top-left-radius: index.$table-rad;
     }
 
     &:last-child {
       border-right: none;
-      border-top-right-radius: vars.$table-rad;
+      border-top-right-radius: index.$table-rad;
     }
   }
 }

@@ -1,10 +1,9 @@
-@use "../../common/styles/vars";
-@use "../../common/styles/mixins";
+@use "../../common/styles/index" as index;
 
 .button {
   padding: 4px;
   border: none;
-  border-radius: vars.$icon-btn-rad;
+  border-radius: index.$icon-btn-rad;
   transition: transform 0.2s ease;
 
   &:hover {
@@ -21,5 +20,5 @@
 .search-button {
   height: 40px;
   width: 40px;
-  background-color: vars.$primary;
+  background-color: index.$primary;
 }

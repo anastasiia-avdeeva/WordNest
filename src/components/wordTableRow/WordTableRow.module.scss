@@ -1,12 +1,11 @@
-@use "../../common/styles/vars";
-@use "../../common/styles/mixins";
+@use "../../common/styles/index" as index;
 
 .table {
   &__cell {
-    padding: vars.$cell-padding;
-    height: vars.$row-height;
-    border-right: 1px solid vars.$primary;
-    border-top: 1px solid vars.$primary;
+    padding: index.$cell-padding;
+    height: index.$row-height;
+    border-right: 1px solid index.$primary;
+    border-top: 1px solid index.$primary;
 
     &:nth-child(2) {
       font-weight: bold;

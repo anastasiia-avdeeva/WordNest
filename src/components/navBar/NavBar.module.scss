@@ -1,23 +1,22 @@
-@use "../../common/styles/vars";
-@use "../../common/styles/mixins";
+@use "../../common/styles/index" as index;
 
 .nav {
   &__list {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
-    color: vars.$text-color-medium;
+    color: index.$text-color-medium;
   }
 }
 
 .header-nav {
   &__list {
-    @include mixins.Body2-font;
+    @include index.Body2-font;
   }
 }
 
 .footer-nav {
   &__list {
-    @include mixins.Body3-font;
+    @include index.Body3-font;
   }
 }

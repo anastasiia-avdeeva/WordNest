@@ -1,13 +1,12 @@
-@use "../../common/styles/vars";
-@use "../../common/styles/mixins";
+@use "../../common/styles/index" as index;
 
 .btn {
   padding: 10px 20px;
   border: none;
-  border-radius: vars.$text-btn-rad;
-  // @include mixins.Body3-font;
-  @include mixins.Button2-font;
-  color: vars.$white-color;
+  border-radius: index.$text-btn-rad;
+  // @include index.Body3-font;
+  @include index.Button2-font;
+  color: index.$white-color;
   transition: transform 0.2s ease;
 
   &:hover {
@@ -16,13 +15,13 @@
 }
 
 .primary-btn {
-  background-color: vars.$secondary-Green;
+  background-color: index.$secondary-Green;
 }
 
 .success-btn {
-  background-color: vars.$secondary-Pink;
+  background-color: index.$secondary-Pink;
 }
 
 .danger-btn {
-  background-color: vars.$secondary-Orange;
+  background-color: index.$secondary-Orange;
 }

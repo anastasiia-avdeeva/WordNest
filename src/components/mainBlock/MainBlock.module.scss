@@ -1,5 +1,4 @@
-@use "../../common/styles/vars";
-@use "../../common/styles/mixins";
+@use "../../common/styles/index" as index;
 
 .main {
   margin: 50px auto;
