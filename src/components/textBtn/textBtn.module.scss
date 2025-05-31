@@ -2,12 +2,12 @@
 @use "../../common/styles/mixins";
 
 .btn {
-  padding: 6px 20px;
+  padding: 10px 20px;
   border: none;
   border-radius: vars.$text-btn-rad;
   // @include mixins.Body3-font;
   @include mixins.Button2-font;
-  color: vars.$text-white;
+  color: vars.$white-color;
   transition: transform 0.2s ease;
 
   &:hover {
