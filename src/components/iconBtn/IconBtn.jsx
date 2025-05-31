@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import styles from "./IconBtn.module.scss";
 
-export const IconButton = ({ variant, icon, alt }) => {
+export const IconBtn = ({ variant, icon, alt }) => {
   const buttonClass = classNames(styles.button, { [styles[variant]]: variant });
 
   return (

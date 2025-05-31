@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import styles from "./SiteLogo.module.css";
+import styles from "./SiteLogo.module.scss";
 
 export const SiteLogo = ({ variant, icon }) => {
   const logoClass = classNames(styles.logo, { [styles[variant]]: variant });
