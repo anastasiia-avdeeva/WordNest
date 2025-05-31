@@ -1,0 +1,25 @@
+@import "../../common/styles/vars";
+@import "../../common/styles/mixins";
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  @include Body1-font;
+
+  &__header {
+    background-color: $primary-light;
+  }
+
+  &__body {
+    background-color: $text-white;
+
+    & tr:last-child td:first-child {
+      border-bottom-left-radius: $table-rad;
+    }
+
+    & tr:last-child td:last-child {
+      border-bottom-right-radius: $table-rad;
+    }
+  }
+}

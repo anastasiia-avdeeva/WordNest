@@ -72,6 +72,7 @@ export const words = [
 ];
 
 export const WORD_TABLE_HEADER_CELLS = [
+  "№",
   "Cлово",
   "Транскрипция",
   "Перевод",
