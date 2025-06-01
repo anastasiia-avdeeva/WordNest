@@ -1,0 +1,28 @@
+@use "../../common/styles/index" as index;
+
+.footer {
+  box-shadow: 0px -1px 0px 0px index.$lines-color;
+
+  &__content {
+    margin: 0 auto;
+    @include index.main-blocks-wrap;
+    min-height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+//box-shadow: offset-x offset-y blur spread color inset;
+// offset-x — смещение по оси X
+
+// offset-y — смещение по оси Y
+
+// blur — размытие
+
+// spread — размер тени
+
+// color
+
+// inset — если стоит, тень внутрь
