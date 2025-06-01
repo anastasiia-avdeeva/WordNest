@@ -1,5 +1,5 @@
 import { IconBtn } from "../iconBtn/IconBtn";
-import searchIcon from "../../assets/icons/searchIcon2.svg";
+import searchIcon from "../../assets/icons/searchIcon.svg";
 import styles from "./SearchPanel.module.scss";
 
 export const SearchPanel = ({ inputId, inputName }) => {

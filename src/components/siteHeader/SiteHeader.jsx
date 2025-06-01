@@ -7,7 +7,7 @@ import styles from "./SiteHeader.module.scss";
 export const SiteHeader = () => {
   return (
     <header className={styles.header}>
-      <div className={styles["header__content"]}>
+      <div className={styles.header__content}>
         <SiteLogo variant="header__logo" icon={logo} />
         <NavBar variant="header" />
         <SearchPanel inputId="headerSearch" inputName="headerSearch" />
