@@ -1,0 +1,11 @@
+@use "../../../common/styles/index" as index;
+
+.search-panel {
+  display: flex;
+  gap: 5px;
+
+  &__input {
+    @include index.input-text-field;
+    min-width: 180px;
+  }
+}

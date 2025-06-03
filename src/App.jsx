@@ -1,6 +1,6 @@
-import { MainBlock } from "./components/mainBlock/MainBlock";
-import { SiteFooter } from "./components/siteFooter/SiteFooter";
-import { SiteHeader } from "./components/siteHeader/SiteHeader";
+import { MainBlock } from "./components/Layout/MainBlock/MainBlock";
+import { SiteHeader } from "./components/Layout/SiteHeader/SiteHeader";
+import { SiteFooter } from "./components/Layout/SiteFooter/SiteFooter";
 
 function App() {
   return (

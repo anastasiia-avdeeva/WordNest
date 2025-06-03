@@ -2,10 +2,10 @@ import {
   words,
   WORD_TABLE_HEADER_CELLS,
 } from "../../common/constants/constants";
-import { HeaderRow } from "../headerRow/HeaderRow";
-import { WordTableRow } from "../wordTableRow/WordTableRow";
-import { EditTableRow } from "../editTableRow/EditTableRow";
-import { sortByName } from "../../common//utils/stringUtils";
+import { HeaderRow } from "../UI/HeaderRow/HeaderRow";
+import { WordTableRow } from "./WordTableRow/WordTableRow";
+import { EditTableRow } from "./EditTableRow/EditTableRow";
+import { sortByName } from "../../common/utils/stringUtils";
 import styles from "./WordTable.module.scss";
 
 export const WordTable = () => {

@@ -1,0 +1,6 @@
+@use "../../../common/styles/index" as index;
+
+.main {
+  margin: 50px auto;
+  @include index.main-blocks-wrap;
+}

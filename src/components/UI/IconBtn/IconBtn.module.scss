@@ -1,0 +1,24 @@
+@use "../../../common/styles/index" as index;
+
+.button {
+  padding: 4px;
+  border: none;
+  border-radius: index.$icon-btn-rad;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &__icon {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.search-button {
+  height: 40px;
+  width: 40px;
+  background-color: index.$primary;
+}
