@@ -1,7 +1,7 @@
 import { SiteLogo } from "../../UI/SiteLogo/SiteLogo";
 import { NavBar } from "../../UI/NavBar/NavBar";
 import { SearchPanel } from "../../UI/SearchPanel/SearchPanel";
-import logo from "../../../assets/icons/logo2.svg";
+import logo from "../../../assets/icons/logo.svg";
 import styles from "./SiteHeader.module.scss";
 
 export const SiteHeader = () => {

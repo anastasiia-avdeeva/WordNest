@@ -6,8 +6,9 @@ import { navBarItems } from "../../../common/constants/constants";
 export const NavBar = ({ variant }) => {
   const lstClass = classNames(
     styles.nav__list,
-    variant && styles[`${variant}-nav__list`]
+    variant && styles[`nav__list--${variant}`]
   );
+
   return (
     <nav>
       <ul className={lstClass}>

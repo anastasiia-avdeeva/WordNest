@@ -7,16 +7,12 @@
     flex-wrap: wrap;
     color: index.$text-color-medium;
   }
-}
 
-.header-nav {
-  &__list {
+  &__list--header {
     @include index.Body1-font;
   }
-}
 
-.footer-nav {
-  &__list {
+  &__list--footer {
     @include index.Body3-font;
   }
 }
