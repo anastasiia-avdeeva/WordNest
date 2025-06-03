@@ -1,16 +1,14 @@
 import { TextBtn } from "../../UI/TextBtn/TextBtn";
 import styles from "./ActionsCell.module.scss";
 
-export const ActionsCell = ({
-  btnVariant1,
-  btnText1,
-  btnVariant2,
-  btnText2,
-}) => {
+export const ActionsCell = ({ actions }) => {
   return (
     <div className={styles.table__btns}>
-      <TextBtn variant={btnVariant1}>{btnText1}</TextBtn>
-      <TextBtn variant={btnVariant2}>{btnText2}</TextBtn>
+      {actions.map(({ variant, content, ...btnProps }, index) => (
+        <TextBtn key={index} variant={variant} {...btnProps}>
+          {content}
+        </TextBtn>
+      ))}
     </div>
   );
 };

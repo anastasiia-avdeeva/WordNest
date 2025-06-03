@@ -38,10 +38,10 @@ export const EditTableRow = ({ index, word }) => {
       </td>
       <td className={cellStyles.table__cell}>
         <ActionsCell
-          btnVariant1={BTN_VARIANTS.SUCCESS}
-          btnVariant2={BTN_VARIANTS.DANGER}
-          btnText1="Сохранить"
-          btnText2="Отменить"
+          actions={[
+            { variant: BTN_VARIANTS.SUCCESS, content: "Сохранить" },
+            { variant: BTN_VARIANTS.DANGER, content: "Отменить" },
+          ]}
         />
       </td>
     </tr>

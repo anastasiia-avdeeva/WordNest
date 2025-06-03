@@ -15,10 +15,10 @@ export const CommonTableRow = ({ index, word }) => {
       <td className={styles.table__cell}>{capitalizeStr(word.theme)}</td>
       <td className={styles.table__cell}>
         <ActionsCell
-          btnVariant1={BTN_VARIANTS.PRIMARY}
-          btnVariant2={BTN_VARIANTS.DANGER}
-          btnText1="Редактировать"
-          btnText2="Удалить"
+          actions={[
+            { variant: BTN_VARIANTS.PRIMARY, content: "Редактировать" },
+            { variant: BTN_VARIANTS.DANGER, content: "Удалить" },
+          ]}
         />
       </td>
     </tr>
