@@ -1,10 +1,6 @@
 @use "../../../common/styles/index" as index;
 
 .table {
-  &__header {
-    background-color: index.$primary-light;
-  }
-
   &__header-row {
     height: index.$row-height;
   }

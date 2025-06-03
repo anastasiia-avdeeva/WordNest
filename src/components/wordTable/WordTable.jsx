@@ -5,15 +5,26 @@ import {
 import { HeaderRow } from "../UI/HeaderRow/HeaderRow";
 import { sortByName } from "../../common/utils/stringUtils";
 import styles from "./WordTable.module.scss";
-import { WordTableBody } from "./WordTableBody/WordTableBody";
+import { WordTableRow } from "./WordTableRow/WordTableRow";
 
 export const WordTable = () => {
-  const onEdit = 3;
+  const itemOnEdit = 3;
   const sortedWords = sortByName(words);
   return (
     <table className={styles.table}>
-      <HeaderRow headerCells={WORD_TABLE_HEADER_CELLS} />
-      <WordTableBody array={sortedWords} itemOnEdit={onEdit} />
+      <thead className={styles.table__header}>
+        <HeaderRow headerCells={WORD_TABLE_HEADER_CELLS} />
+      </thead>
+      <tbody className={styles.table__body}>
+        {sortedWords.map(({ id, ...rest }, index) => (
+          <WordTableRow
+            key={id}
+            word={rest}
+            index={index}
+            isOnEdit={id === itemOnEdit}
+          />
+        ))}
+      </tbody>
     </table>
   );
 };

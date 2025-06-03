@@ -1,4 +1,4 @@
-import cellStyles from "../WordTableRow/WordTableRow.module.scss";
+import cellStyles from "../CommonTableRow/CommonTableRow.module.scss";
 import inputStyles from "./EditTableRow.module.scss";
 import { ActionsCell } from "../ActionsCell/ActionsCell";
 import { capitalizeStr } from "../../../common/utils/stringUtils";
