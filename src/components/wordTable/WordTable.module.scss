@@ -5,20 +5,4 @@
   border-collapse: collapse;
   text-align: center;
   @include index.Body1-font;
-
-  &__header {
-    background-color: index.$primary-light;
-  }
-
-  &__body {
-    background-color: index.$white-color;
-
-    & tr:last-child td:first-child {
-      border-bottom-left-radius: index.$table-rad;
-    }
-
-    & tr:last-child td:last-child {
-      border-bottom-right-radius: index.$table-rad;
-    }
-  }
 }

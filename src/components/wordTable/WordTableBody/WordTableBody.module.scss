@@ -1,0 +1,15 @@
+@use "../../../common/styles/index" as index;
+
+.table {
+  &__body {
+    background-color: index.$white-color;
+
+    & tr:last-child td:first-child {
+      border-bottom-left-radius: index.$table-rad;
+    }
+
+    & tr:last-child td:last-child {
+      border-bottom-right-radius: index.$table-rad;
+    }
+  }
+}
