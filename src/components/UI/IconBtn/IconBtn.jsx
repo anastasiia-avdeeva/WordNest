@@ -5,8 +5,8 @@ export const IconBtn = ({ variant, icon, alt }) => {
   const buttonClass = classNames(styles.button, { [styles[variant]]: variant });
 
   return (
-    <button className={buttonClass}>
-      <img src={icon} alt={alt} className={styles.button__icon} />
+    <button className={buttonClass} aria-label={alt}>
+      <img src={icon} alt="" className={styles.button__icon} />
     </button>
   );
 };
