@@ -1,5 +1,6 @@
 import styles from "./SiteFooter.module.scss";
-import logo from "../../../assets/icons/logo2.svg";
+// import logo from "../../../assets/icons/logo2.svg";
+import logo from "../../../assets/icons/logoFooter.svg";
 import { SiteLogo } from "../../UI/SiteLogo/SiteLogo";
 import { NavBar } from "../../UI/NavBar/NavBar";
 
