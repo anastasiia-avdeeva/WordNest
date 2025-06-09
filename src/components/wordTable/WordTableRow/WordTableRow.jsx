@@ -8,6 +8,7 @@ export const WordTableRow = ({
   handleEdit,
   handleCancel,
   handleDelete,
+  handleSave,
 }) => {
   return editedRowId !== word.id ? (
     <CommonTableRow
@@ -17,6 +18,11 @@ export const WordTableRow = ({
       handleDelete={handleDelete}
     />
   ) : (
-    <EditTableRow word={word} index={index} handleCancel={handleCancel} />
+    <EditTableRow
+      word={word}
+      index={index}
+      handleCancel={handleCancel}
+      handleSave={handleSave}
+    />
   );
 };

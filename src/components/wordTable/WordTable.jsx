@@ -9,15 +9,25 @@ import styles from "./WordTable.module.scss";
 import { WordTableRow } from "./WordTableRow/WordTableRow";
 
 export const WordTable = () => {
+  // states
   const [wordsList, setWordsList] = useState(sortByName(words));
   const [editedRowId, setEditedRowId] = useState(null);
 
+  // btn handlers
   const handleEdit = (id) => setEditedRowId(id);
   const handleCancel = () => setEditedRowId(null);
   const handleDelete = (id) =>
     setWordsList((prevWordsLst) =>
       prevWordsLst.filter((word) => word.id !== id)
     );
+  const handleSave = (id, updatedWord) => {
+    setWordsList((prevWordsLst) =>
+      prevWordsLst.map((word) =>
+        word.id === id ? { ...word, ...updatedWord } : word
+      )
+    );
+    setEditedRowId(null);
+  };
 
   return (
     <table className={styles.table}>
@@ -34,6 +44,7 @@ export const WordTable = () => {
             handleEdit={() => handleEdit(word.id)}
             handleCancel={() => handleCancel(word.id)}
             handleDelete={() => handleDelete(word.id)}
+            handleSave={handleSave}
           />
         ))}
       </tbody>

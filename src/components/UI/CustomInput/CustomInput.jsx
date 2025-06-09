@@ -1,10 +1,12 @@
 import React from "react";
 
-export const CustomInput = ({ classInput, classMsg, ...rest }) => {
+export const CustomInput = ({ classInput, classMsg, showError, ...rest }) => {
   return (
     <>
       <input className={classInput} {...rest} />
-      <p className={classMsg}>Invalid input</p>
+      {showError && (
+        <p className={classMsg}>Пожалуйста, введите новое значение</p>
+      )}
     </>
   );
 };
