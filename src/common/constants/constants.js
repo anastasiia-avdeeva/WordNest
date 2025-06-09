@@ -80,6 +80,24 @@ export const WORD_TABLE_HEADER_CELLS = [
   "Управление",
 ];
 
+export const wordTableInputProps = [
+  {
+    id: 1,
+    name: "transcription",
+    placeholder: "Транскрипция",
+  },
+  {
+    id: 2,
+    name: "translation",
+    placeholder: "Перевод",
+  },
+  {
+    id: 3,
+    name: "theme",
+    placeholder: "Тема",
+  },
+];
+
 export const navBarItems = [
   { id: 1, name: "Главная", href: "/" },
   { id: 2, name: "Все слова", href: "/all-words" },
