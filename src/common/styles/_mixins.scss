@@ -70,6 +70,12 @@
   letter-spacing: -0.48px;
 }
 
+@mixin Input-error-font {
+  @include Body-label-font;
+  font-size: 12px;
+  color: red;
+}
+
 @mixin Button-base-font {
   @include Text-base-font;
   font-weight: 700;
