@@ -1,8 +1,21 @@
 @use "../../../common/styles/index" as index;
 
+// .table {
+//   &__input {
+//     @include index.input-text-field;
+//     width: 95%;
+//   }
+// }
+
 .table {
   &__input {
     @include index.input-text-field;
     width: 95%;
+  }
+
+  &__err-msg {
+    @include index.Input-error-font;
+    color: red;
+    font-style: italic;
   }
 }

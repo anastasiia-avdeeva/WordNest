@@ -3,7 +3,7 @@ import styles from "./CommonTableRow.module.scss";
 import { capitalizeStr } from "../../../common/utils/stringUtils";
 import { BTN_VARIANTS } from "../../../common/constants/classConst";
 
-export const CommonTableRow = ({ index, word }) => {
+export const CommonTableRow = ({ index, word, handleEdit, handleDelete }) => {
   return (
     <tr className={styles.table__row}>
       <td className={styles.table__cell}>{index + 1}</td>
@@ -16,8 +16,16 @@ export const CommonTableRow = ({ index, word }) => {
       <td className={styles.table__cell}>
         <ActionsCell
           actions={[
-            { variant: BTN_VARIANTS.PRIMARY, content: "Редактировать" },
-            { variant: BTN_VARIANTS.DANGER, content: "Удалить" },
+            {
+              variant: BTN_VARIANTS.PRIMARY,
+              content: "Редактировать",
+              onClick: handleEdit,
+            },
+            {
+              variant: BTN_VARIANTS.DANGER,
+              content: "Удалить",
+              onClick: handleDelete,
+            },
           ]}
         />
       </td>

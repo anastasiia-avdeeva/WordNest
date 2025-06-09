@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   words,
   WORD_TABLE_HEADER_CELLS,
@@ -8,20 +9,31 @@ import styles from "./WordTable.module.scss";
 import { WordTableRow } from "./WordTableRow/WordTableRow";
 
 export const WordTable = () => {
-  const itemOnEdit = 3;
-  const sortedWords = sortByName(words);
+  const [wordsList, setWordsList] = useState(sortByName(words));
+  const [editedRowId, setEditedRowId] = useState(null);
+
+  const handleEdit = (id) => setEditedRowId(id);
+  const handleCancel = () => setEditedRowId(null);
+  const handleDelete = (id) =>
+    setWordsList((prevWordsLst) =>
+      prevWordsLst.filter((word) => word.id !== id)
+    );
+
   return (
     <table className={styles.table}>
       <thead className={styles.table__header}>
         <HeaderRow headerCells={WORD_TABLE_HEADER_CELLS} />
       </thead>
       <tbody className={styles.table__body}>
-        {sortedWords.map(({ id, ...rest }, index) => (
+        {wordsList.map((word, index) => (
           <WordTableRow
-            key={id}
-            word={rest}
+            key={word.id}
+            word={word}
             index={index}
-            isOnEdit={id === itemOnEdit}
+            editedRowId={editedRowId}
+            handleEdit={() => handleEdit(word.id)}
+            handleCancel={() => handleCancel(word.id)}
+            handleDelete={() => handleDelete(word.id)}
           />
         ))}
       </tbody>
