@@ -75,6 +75,7 @@ export const EditTableRow = ({ index, word, handleCancel, handleSave }) => {
             onChange={handleChange}
             onBlur={handleBlur}
             showError={errors[input.name]}
+            required
           />
         </td>
       ))}
