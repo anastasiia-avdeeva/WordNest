@@ -7,7 +7,7 @@ import { BTN_VARIANTS } from "../../../common/constants/classConst";
 import { wordTableInputProps } from "../../../common/constants/constants";
 import { CustomInput } from "../../UI/CustomInput/CustomInput";
 
-export const EditTableRow = ({ index, word, handleCancel, handleSave }) => {
+export const EditTableRow = ({ index, word, onCancel, onSave }) => {
   //states
   const [inputVals, setInputVals] = useState({
     transcription: word.transcription || "",
@@ -43,7 +43,6 @@ export const EditTableRow = ({ index, word, handleCancel, handleSave }) => {
       ...prev,
       [name]: value.trim() === "",
     }));
-    console.log(errors);
   };
 
   const areAllInputsValid = () => {
@@ -55,7 +54,7 @@ export const EditTableRow = ({ index, word, handleCancel, handleSave }) => {
       const trimmedInputs = Object.fromEntries(
         Object.entries(inputVals).map(([key, val]) => [key, val.trim()])
       );
-      handleSave(word.id, trimmedInputs);
+      onSave(word.id, trimmedInputs);
     }
   };
 
@@ -91,7 +90,7 @@ export const EditTableRow = ({ index, word, handleCancel, handleSave }) => {
             {
               variant: BTN_VARIANTS.DANGER,
               content: "Отменить",
-              onClick: handleCancel,
+              onClick: onCancel,
             },
           ]}
         />

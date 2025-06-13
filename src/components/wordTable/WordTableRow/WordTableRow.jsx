@@ -5,24 +5,24 @@ export const WordTableRow = ({
   word,
   index,
   editedRowId,
-  handleEdit,
-  handleCancel,
-  handleDelete,
-  handleSave,
+  onEdit,
+  onCancel,
+  onDelete,
+  onSave,
 }) => {
   return editedRowId !== word.id ? (
     <CommonTableRow
       word={word}
       index={index}
-      handleEdit={handleEdit}
-      handleDelete={handleDelete}
+      onEdit={onEdit}
+      onDelete={onDelete}
     />
   ) : (
     <EditTableRow
       word={word}
       index={index}
-      handleCancel={handleCancel}
-      handleSave={handleSave}
+      onCancel={onCancel}
+      onSave={onSave}
     />
   );
 };

@@ -41,10 +41,10 @@ export const WordTable = () => {
             word={word}
             index={index}
             editedRowId={editedRowId}
-            handleEdit={() => handleEdit(word.id)}
-            handleCancel={() => handleCancel(word.id)}
-            handleDelete={() => handleDelete(word.id)}
-            handleSave={handleSave}
+            onEdit={() => handleEdit(word.id)}
+            onCancel={handleCancel}
+            onDelete={() => handleDelete(word.id)}
+            onSave={handleSave}
           />
         ))}
       </tbody>
