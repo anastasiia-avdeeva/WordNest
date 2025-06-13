@@ -1,0 +1,9 @@
+@use "../../common/styles/index" as index;
+
+.cards {
+  max-width: 500px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
