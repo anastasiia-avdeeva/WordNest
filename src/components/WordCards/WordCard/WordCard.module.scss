@@ -1,0 +1,117 @@
+@use "../../../common/styles/index" as index;
+
+.card {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 300px;
+  height: 230px;
+  padding: 20px 10px;
+  background-color: index.$white-color;
+  border-radius: index.$card-rad;
+  box-shadow: 0px 22.898px 45.796px -11.449px rgba(52, 41, 39, 0.08);
+  transform: rotateY(var(--rotate-y, 0));
+  transform-style: preserve-3d;
+  transition: 200ms;
+
+  &.flip {
+    --rotate-y: 180deg;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__title {
+    @include index.Heading2-font;
+  }
+
+  &__par {
+    @include index.Body1-font;
+  }
+
+  &__par--light {
+    color: index.$text-color-medium;
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__action &__par {
+    font-weight: bolder;
+  }
+
+  &__front,
+  &__back {
+    height: 80%; // временнно чтобы растянуть по длине карточки
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__back {
+    transform: rotateY(180deg);
+  }
+}
+
+//prev styles
+
+// .card {
+//   margin: 0 auto;
+//   width: 300px;
+//   height: 230px;
+//   padding: 20px 10px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   gap: 20px;
+//   align-items: center;
+//   background-color: index.$white-color;
+//   border-radius: index.$card-rad;
+//   box-shadow: 0px 22.898px 45.796px -11.449px rgba(52, 41, 39, 0.08);
+
+//   &__content {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 10px;
+//     align-items: center;
+//   }
+
+//   &__title {
+//     @include index.Heading2-font;
+//   }
+
+//   &__par {
+//     @include index.Body1-font;
+//   }
+
+//   &__par--light {
+//     color: index.$text-color-medium;
+//   }
+
+//   &__action {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 10px;
+//   }
+
+//   &__action &__par {
+//     font-weight: bolder;
+//   }
+// }
