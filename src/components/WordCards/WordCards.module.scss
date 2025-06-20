@@ -8,4 +8,16 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
+
+  &__card-and-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__counter {
+    @include index.Body1-font;
+    color: index.$text-color-medium;
+  }
 }

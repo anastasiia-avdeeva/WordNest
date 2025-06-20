@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { WordCard } from "./WordCard/WordCard";
 import styles from "./WordCards.module.scss";
 import { IconBtn } from "../UI/IconBtn/IconBtn";
@@ -32,7 +32,12 @@ export const WordCards = ({ words = [], initialIndex = 0 }) => {
         alt="кнопка назад"
         onClick={handlePrevious}
       />
-      <WordCard word={words[currentIndex]} />
+      <div className={styles["cards__card-and-counter"]}>
+        <WordCard key={currentIndex} word={words[currentIndex]} />
+        <p className={styles.cards__counter}>{`${currentIndex + 1}/${
+          words.length
+        }`}</p>
+      </div>
       <IconBtn
         variant="slider-button"
         icon={nextIcon}

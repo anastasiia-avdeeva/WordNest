@@ -4,8 +4,8 @@ import { CardFront } from "./CardFront/CardFront";
 import styles from "./WordCard.module.scss";
 import classNames from "classnames";
 
-export const WordCard = ({ word }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
+export const WordCard = ({ word, flipped = false }) => {
+  const [isFlipped, setIsFlipped] = useState(flipped);
 
   const handleClick = () => {
     setIsFlipped((prevState) => !prevState);

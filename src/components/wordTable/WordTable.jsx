@@ -27,24 +27,26 @@ export const WordTable = ({ words }) => {
   };
 
   return (
-    <table className={styles.table}>
-      <thead className={styles.table__header}>
-        <HeaderRow headerCells={WORD_TABLE_HEADER_CELLS} />
-      </thead>
-      <tbody className={styles.table__body}>
-        {wordsList.map((word, index) => (
-          <TableRow
-            key={word.id}
-            word={word}
-            index={index}
-            editedRowId={editedRowId}
-            onEdit={() => handleEdit(word.id)}
-            onCancel={handleCancel}
-            onDelete={() => handleDelete(word.id)}
-            onSave={handleSave}
-          />
-        ))}
-      </tbody>
-    </table>
+    <div className="table-wrapper">
+      <table className={styles.table}>
+        <thead className={styles.table__header}>
+          <HeaderRow headerCells={WORD_TABLE_HEADER_CELLS} />
+        </thead>
+        <tbody className={styles.table__body}>
+          {wordsList.map((word, index) => (
+            <TableRow
+              key={word.id}
+              word={word}
+              index={index}
+              editedRowId={editedRowId}
+              onEdit={() => handleEdit(word.id)}
+              onCancel={handleCancel}
+              onDelete={() => handleDelete(word.id)}
+              onSave={handleSave}
+            />
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
