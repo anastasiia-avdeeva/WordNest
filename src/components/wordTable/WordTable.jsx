@@ -6,7 +6,7 @@ import {
 import { HeaderRow } from "../UI/HeaderRow/HeaderRow";
 import { sortByName } from "../../common/utils/stringUtils";
 import styles from "./WordTable.module.scss";
-import { WordTableRow } from "./WordTableRow/WordTableRow";
+import { TableRow } from "./TableRow/TableRow";
 
 export const WordTable = () => {
   // states
@@ -36,7 +36,7 @@ export const WordTable = () => {
       </thead>
       <tbody className={styles.table__body}>
         {wordsList.map((word, index) => (
-          <WordTableRow
+          <TableRow
             key={word.id}
             word={word}
             index={index}

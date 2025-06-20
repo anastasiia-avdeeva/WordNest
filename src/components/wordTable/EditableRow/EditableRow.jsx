@@ -1,13 +1,13 @@
 import { useState } from "react";
-import cellStyles from "../CommonTableRow/CommonTableRow.module.scss";
-import inputStyles from "./EditTableRow.module.scss";
+import cellStyles from "../CommonRow/CommonRow.module.scss";
+import inputStyles from "./EditableRow.module.scss";
 import { ActionsCell } from "../ActionsCell/ActionsCell";
 import { capitalizeStr } from "../../../common/utils/stringUtils";
 import { BTN_VARIANTS } from "../../../common/constants/classConst";
 import { wordTableInputProps } from "../../../common/constants/constants";
 import { CustomInput } from "../../UI/CustomInput/CustomInput";
 
-export const EditTableRow = ({ index, word, onCancel, onSave }) => {
+export const EditableRow = ({ index, word, onCancel, onSave }) => {
   //states
   const [inputVals, setInputVals] = useState({
     transcription: word.transcription || "",

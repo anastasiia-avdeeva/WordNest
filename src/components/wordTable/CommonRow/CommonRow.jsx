@@ -1,9 +1,9 @@
 import { ActionsCell } from "../ActionsCell/ActionsCell";
-import styles from "./CommonTableRow.module.scss";
+import styles from "./CommonRow.module.scss";
 import { capitalizeStr } from "../../../common/utils/stringUtils";
 import { BTN_VARIANTS } from "../../../common/constants/classConst";
 
-export const CommonTableRow = ({ index, word, onEdit, onDelete }) => {
+export const CommonRow = ({ index, word, onEdit, onDelete }) => {
   return (
     <tr className={styles.table__row}>
       <td className={styles.table__cell}>{index + 1}</td>

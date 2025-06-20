@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { WordCardBack } from "./WordCardBack/WordCardBack";
-import { WordCardFront } from "./WordCardFront/WordCardFront";
+import { CardBack } from "./CardBack/CardBack";
+import { CardFront } from "./CardFront/CardFront";
 import styles from "./WordCard.module.scss";
 import classNames from "classnames";
 
@@ -13,8 +13,8 @@ export const WordCard = ({ word }) => {
   return (
     <div className={classNames(styles.card, isFlipped && styles.flip)}>
       <div className={styles.card__inner}>
-        <WordCardFront word={word} onFlip={handleClick} />
-        <WordCardBack word={word} onFlip={handleClick} />
+        <CardFront word={word} onFlip={handleClick} />
+        <CardBack word={word} onFlip={handleClick} />
       </div>
     </div>
   );

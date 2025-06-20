@@ -3,7 +3,7 @@ import { TextBtn } from "../../../UI/TextBtn/TextBtn";
 import { BTN_VARIANTS } from "../../../../common/constants/classConst";
 import cardStyles from "../WordCard.module.scss";
 
-export const WordCardBack = ({ word, onFlip }) => {
+export const CardBack = ({ word, onFlip }) => {
   return (
     <div className={cardStyles.card__back}>
       <div className={cardStyles.card__content}>
