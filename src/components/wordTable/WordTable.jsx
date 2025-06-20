@@ -17,12 +17,12 @@ export const WordTable = () => {
   const handleEdit = (id) => setEditedRowId(id);
   const handleCancel = () => setEditedRowId(null);
   const handleDelete = (id) =>
-    setWordsList((prevWordsLst) =>
-      prevWordsLst.filter((word) => word.id !== id)
+    setWordsList((previousWordsLst) =>
+      previousWordsLst.filter((word) => word.id !== id)
     );
   const handleSave = (id, updatedWord) => {
-    setWordsList((prevWordsLst) =>
-      prevWordsLst.map((word) =>
+    setWordsList((previousWordsLst) =>
+      previousWordsLst.map((word) =>
         word.id === id ? { ...word, ...updatedWord } : word
       )
     );

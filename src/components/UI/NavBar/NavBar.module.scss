@@ -8,6 +8,10 @@
     color: index.$text-color-medium;
   }
 
+  &__list li:hover {
+    transform: scale(1.1);
+  }
+
   &__list--header {
     @include index.Body1-font;
   }

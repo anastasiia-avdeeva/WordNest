@@ -9,7 +9,7 @@ import { CustomInput } from "../../UI/CustomInput/CustomInput";
 
 export const EditableRow = ({ index, word, onCancel, onSave }) => {
   //states
-  const [inputVals, setInputVals] = useState({
+  const [inputValues, setinputValues] = useState({
     transcription: word.transcription || "",
     translation: word.translation || "",
     theme: word.theme || "",
@@ -22,37 +22,32 @@ export const EditableRow = ({ index, word, onCancel, onSave }) => {
   });
 
   //input handler
-  const handleChange = (evt) => {
-    const { name, value } = evt.target;
+  const handleChange = (event) => {
+    const { name, value } = event.target;
 
-    setInputVals((prevInputVals) => ({
-      ...prevInputVals,
+    setinputValues((previousInputValues) => ({
+      ...previousInputValues,
       [name]: value,
     }));
-
-    // setErrors((prevErrs) => ({
-    //   ...prevErrs,
-    //   [name]: value.trim() === "",
-    // }));
   };
 
-  const handleBlur = (evt) => {
-    const { name, value } = evt.target;
+  const handleBlur = (event) => {
+    const { name, value } = event.target;
 
-    setErrors((prev) => ({
-      ...prev,
+    setErrors((previousErrors) => ({
+      ...previousErrors,
       [name]: value.trim() === "",
     }));
   };
 
   const areAllInputsValid = () => {
-    return Object.values(errors).every((err) => err === false);
+    return Object.values(errors).every((error) => error === false);
   };
 
   const saveHandler = () => {
     if (areAllInputsValid()) {
       const trimmedInputs = Object.fromEntries(
-        Object.entries(inputVals).map(([key, val]) => [key, val.trim()])
+        Object.entries(inputValues).map(([key, val]) => [key, val.trim()])
       );
       onSave(word.id, trimmedInputs);
     }
@@ -70,7 +65,7 @@ export const EditableRow = ({ index, word, onCancel, onSave }) => {
             classMsg={inputStyles["table__err-msg"]}
             name={input.name}
             placeholder={input.placeholder}
-            value={inputVals[input.name]}
+            value={inputValues[input.name]}
             onChange={handleChange}
             onBlur={handleBlur}
             showError={errors[input.name]}
