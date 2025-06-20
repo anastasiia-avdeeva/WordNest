@@ -12,11 +12,7 @@ export const SearchPanel = ({ inputId, inputName }) => {
         name={inputName}
         id={inputId}
       />
-      <IconBtn
-        variant="search-button"
-        icon={searchIcon}
-        alt="иконка лупы для кнопки поиска"
-      />
+      <IconBtn variant="search-button" icon={searchIcon} alt="кнопка поиска" />
     </div>
   );
 };

@@ -1,14 +1,11 @@
 import { useState } from "react";
-import {
-  words,
-  WORD_TABLE_HEADER_CELLS,
-} from "../../common/constants/constants";
+import { WORD_TABLE_HEADER_CELLS } from "../../common/constants/constants";
 import { HeaderRow } from "../UI/HeaderRow/HeaderRow";
 import { sortByName } from "../../common/utils/stringUtils";
 import styles from "./WordTable.module.scss";
 import { TableRow } from "./TableRow/TableRow";
 
-export const WordTable = () => {
+export const WordTable = ({ words }) => {
   // states
   const [wordsList, setWordsList] = useState(sortByName(words));
   const [editedRowId, setEditedRowId] = useState(null);

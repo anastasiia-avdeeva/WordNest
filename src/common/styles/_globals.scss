@@ -42,3 +42,7 @@ input:focus,
 textarea:focus {
   outline: none; // Убирает стандартное выделение
 }
+
+.error-message {
+  @include index.Heading2-font;
+}
