@@ -1,7 +1,9 @@
 @use "../../common/styles/index" as index;
 
 .cards {
-  width: 80%;
+  position: relative;
+  width: 500px;
+  height: 300px;
   margin: 50px auto;
   display: flex;
   flex-direction: row;
@@ -10,10 +12,18 @@
   gap: 30px;
 
   &__card-and-counter {
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
+  }
+
+  &__motion-wrapper {
+    width: "100%";
+    height: "100%";
+    position: "absolute";
   }
 
   &__counter {
