@@ -3,7 +3,7 @@ import { TextBtn } from "../../../UI/TextBtn/TextBtn";
 import { BTN_VARIANTS } from "../../../../common/constants/classConst";
 import cardStyles from "../WordCard.module.scss";
 
-export const CardFront = ({ word, onFlip }) => {
+export const CardFront = ({ word }) => {
   return (
     <div className={cardStyles.card__front}>
       <div className={cardStyles.card__content}>
@@ -17,9 +17,7 @@ export const CardFront = ({ word, onFlip }) => {
         </p>
       </div>
       <div className={cardStyles.card__action}>
-        <TextBtn variant={BTN_VARIANTS.PRIMARY} onClick={onFlip}>
-          Показать перевод
-        </TextBtn>
+        <TextBtn variant={BTN_VARIANTS.PRIMARY}>Показать перевод</TextBtn>
       </div>
     </div>
   );

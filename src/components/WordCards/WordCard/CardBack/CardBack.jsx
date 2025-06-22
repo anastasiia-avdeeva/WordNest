@@ -3,7 +3,7 @@ import { TextBtn } from "../../../UI/TextBtn/TextBtn";
 import { BTN_VARIANTS } from "../../../../common/constants/classConst";
 import cardStyles from "../WordCard.module.scss";
 
-export const CardBack = ({ word, onFlip }) => {
+export const CardBack = ({ word }) => {
   return (
     <div className={cardStyles.card__back}>
       <div className={cardStyles.card__content}>
@@ -20,9 +20,7 @@ export const CardBack = ({ word, onFlip }) => {
         <p className={`${cardStyles.card__par}`}>
           {capitalizeStr(word.translation)}
         </p>
-        <TextBtn variant={BTN_VARIANTS.SUCCESS} onClick={onFlip}>
-          Скрыть перевод
-        </TextBtn>
+        <TextBtn variant={BTN_VARIANTS.SUCCESS}>Скрыть перевод</TextBtn>
       </div>
     </div>
   );

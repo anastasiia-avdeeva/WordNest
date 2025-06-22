@@ -11,10 +11,13 @@ export const WordCard = ({ word, flipped = false }) => {
     setIsFlipped((prevState) => !prevState);
   };
   return (
-    <div className={classNames(styles.card, isFlipped && styles.flip)}>
+    <div
+      className={classNames(styles.card, isFlipped && styles.flip)}
+      onClick={handleClick}
+    >
       <div className={styles.card__inner}>
-        <CardFront word={word} onFlip={handleClick} />
-        <CardBack word={word} onFlip={handleClick} />
+        <CardFront word={word} />
+        <CardBack word={word} />
       </div>
     </div>
   );
