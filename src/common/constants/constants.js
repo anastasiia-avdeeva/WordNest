@@ -100,7 +100,7 @@ export const wordTableInputProps = [
 
 export const navBarItems = [
   { id: 1, name: "Главная", href: "/" },
-  { id: 2, name: "Все слова", href: "/all-words" },
-  { id: 3, name: "Выученные слова", href: "/learned-words" },
-  { id: 4, name: "Тренировка", href: "/training" },
+  { id: 2, name: "Тренировка", href: "/game" },
+  { id: 3, name: "Все слова", href: "/all-words" },
+  { id: 4, name: "Выученные слова", href: "/learned-words" },
 ];

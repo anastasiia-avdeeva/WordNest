@@ -10,7 +10,7 @@ export const NavBar = ({ variant }) => {
   );
 
   return (
-    <nav>
+    <nav className="nav">
       <ul className={lstClass}>
         {navBarItems.map((item) => (
           <NavItem key={item.id} href={item.href}>

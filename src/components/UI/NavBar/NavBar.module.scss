@@ -19,4 +19,8 @@
   &__list--footer {
     @include index.Body3-font;
   }
+
+  &__link--active {
+    color: index.$text-color-black;
+  }
 }
