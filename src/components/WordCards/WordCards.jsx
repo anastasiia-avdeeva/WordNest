@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion"; // обязательно из 'framer-motion'
+import { motion, AnimatePresence } from "framer-motion";
 import { WordCard } from "./WordCard/WordCard";
 import styles from "./WordCards.module.scss";
 import { IconBtn } from "../UI/IconBtn/IconBtn";
 import nextIcon from "../../assets/icons/nextIcon.svg";
 import prevIcon from "../../assets/icons/prevIcon.svg";
+import { ErrorMsg } from "../UI/ErrorMsg/ErrorMsg";
 
 const variants = {
   enter: (direction) => ({
@@ -31,11 +32,7 @@ export const WordCards = ({ words = [], initialIndex = 0 }) => {
   ]);
 
   if (!words.length) {
-    return (
-      <div className={styles.cards}>
-        <p className="error-message">Нет доступных слов для изучения.</p>
-      </div>
-    );
+    return <ErrorMsg message="Нет доступных слов для изучения" />;
   }
 
   const paginate = (newDirection) => {

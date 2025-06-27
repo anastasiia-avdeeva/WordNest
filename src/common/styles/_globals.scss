@@ -45,4 +45,8 @@ textarea:focus {
 
 .error-message {
   @include index.Heading2-font;
+
+  &__wrapper {
+    text-align: center;
+  }
 }

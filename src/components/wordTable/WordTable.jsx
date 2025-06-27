@@ -4,11 +4,16 @@ import { HeaderRow } from "../UI/HeaderRow/HeaderRow";
 import { sortByName } from "../../common/utils/stringUtils";
 import styles from "./WordTable.module.scss";
 import { TableRow } from "./TableRow/TableRow";
+import { ErrorMsg } from "../UI/ErrorMsg/ErrorMsg";
 
-export const WordTable = ({ words }) => {
+export const WordTable = ({ words = [] }) => {
   // states
   const [wordsList, setWordsList] = useState(sortByName(words));
   const [editedRowId, setEditedRowId] = useState(null);
+
+  if (!words.length) {
+    return <ErrorMsg message="Упс, что-то пошло не так" />;
+  }
 
   // btn handlers
   const handleEdit = (id) => setEditedRowId(id);
