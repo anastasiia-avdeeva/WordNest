@@ -1,0 +1,9 @@
+@use "../../../common/styles/index" as index;
+
+.error-message {
+  @include index.Heading2-font;
+
+  &__wrapper {
+    text-align: center;
+  }
+}

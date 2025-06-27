@@ -1,7 +1,12 @@
+import styles from "./ErrorMsg.module.scss";
+
 export const ErrorMsg = ({ message }) => {
   return (
-    <div className="error-message__wrapper">
-      <p className="error-message"> {message} &#128532;</p>
+    <div className={styles["error-message__wrapper"]}>
+      <h2 className={styles["error-message"]}> {message} &#128532;</h2>
+      <p className={styles["error-message"]}>
+        Пожалуйста, повторите попытку позже
+      </p>
     </div>
   );
 };
