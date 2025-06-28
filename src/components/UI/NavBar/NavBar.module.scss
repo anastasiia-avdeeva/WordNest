@@ -3,7 +3,8 @@
 .nav {
   &__list {
     display: flex;
-    gap: 30px;
+    gap: 20px;
+    justify-content: center;
     flex-wrap: wrap;
     color: index.$text-color-medium;
   }
