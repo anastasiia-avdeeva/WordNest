@@ -10,9 +10,13 @@ export const SiteHeader = () => {
     <header className={styles.header}>
       <div className={styles.header__content}>
         <SiteLogo variant="header__logo" icon={logo} />
-        {/* <NavBar variant="header" />
-        <SearchPanel inputId="headerSearch" inputName="headerSearch" /> */}
-        <BurgerMenu />
+        <div className={styles["header__menu-desctop"]}>
+          <NavBar variant="header" />
+          <SearchPanel inputId="headerSearch" inputName="headerSearch" />
+        </div>
+        <div className={styles["header__burger-menu"]}>
+          <BurgerMenu />
+        </div>
       </div>
     </header>
   );

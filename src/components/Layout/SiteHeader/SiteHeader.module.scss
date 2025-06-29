@@ -13,4 +13,23 @@
     align-items: center;
     gap: 10px;
   }
+
+  &__burger-menu {
+    display: none;
+
+    @include index.respond-to(index.$tablets) {
+      display: block;
+    }
+  }
+
+  &__menu-desctop {
+    flex-grow: 0.5;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    @include index.respond-to(index.$tablets) {
+      display: none;
+    }
+  }
 }
